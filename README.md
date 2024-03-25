@@ -36,3 +36,18 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+# TODOS
+
+[] Deploy a free Strapi CMS
+[] Use MONGO DB and heroku
+[] Add environnment variable to svelte project
+[] Create NavBar
+[] GET data on all pages
+[] Main
+[] Photos
+[] Drawings
+[] About (do we need to?)
+[] Minimal display and css on all pages
+[] Deploy (using vercel)?
+[] Better css
