@@ -10,6 +10,6 @@
 </svelte:head>
 
 <NavBar />
-<div class="p-10 w-full h-full mt-5">
+<div class="p-10 w-full h-full mt-16" id="layout">
   <slot />
 </div>
