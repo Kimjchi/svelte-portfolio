@@ -3,4 +3,4 @@
   export let text = "";
 </script>
 
-<img src={href} alt={text} class="mx-auto mt-10 max-h-96" />
+<img src={href} alt={text} class="mx-auto my-10 max-h-96" />

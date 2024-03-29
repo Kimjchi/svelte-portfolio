@@ -25,15 +25,15 @@
     index = index + steps < 0 ? maxIndex - 1 : (index + steps) % maxIndex;
     const description = document.querySelector("#description");
     if (description) {
-      gsap.set("#content", { height: "150vh" });
+      gsap.set("#content", { minHeight: "150vh" });
     } else {
-      gsap.set("#content", { height: "86vh" });
+      gsap.set("#content", { minHeight: "86vh" });
     }
   }
 
   onMount(() => {
     gsap.defaults({ overwrite: "auto", duration: 0.3 });
-    gsap.set("#content", { height: "150vh" });
+    gsap.set("#content", { minHeight: "150vh" });
   });
   beforeUpdate(() => {
     ScrollTrigger.killAll();
@@ -68,9 +68,9 @@
         onToggle: (self) => self.isActive && toDescription(),
         id: "description",
       });
-      gsap.set("#content", { height: "150vh" });
+      gsap.set("#content", { minHeight: "150vh" });
     } else {
-      gsap.set("#content", { height: "86vh" });
+      gsap.set("#content", { minHeight: "86vh" });
     }
   });
   function scrollTo(id = "description", int = 700) {
@@ -83,7 +83,7 @@
   <div id="showcase" class="panel p-20 mt-5">
     <div
       style="background-color: {currentColor};"
-      class="w-100% h-[86vh] min-h-60 roboto-medium relative"
+      class="w-100% h-[80vh] min-h-60 roboto-medium relative"
     >
       {#key index}
         <div
@@ -170,7 +170,7 @@
 
   {#if currentProjectContent}
     <div
-      class="hidden panel p-20 mt-5 text-center h-full"
+      class="hidden panel p-20 mt-5 text-center h-full overflow-y-scroll"
       id="description"
       style="
 		--gradient:{currentColor};
